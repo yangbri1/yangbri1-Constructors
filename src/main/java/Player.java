@@ -14,6 +14,7 @@
  *      Player newPlayer = new Player("Mario", 35);
  **/
 public class Player {
+    // declare some instance variables
     public String playerName;
     public int level;
 
@@ -30,8 +31,13 @@ public class Player {
      *
      * @param playerName the name of the player to be created.
      */
+    // Constructor (not default as has arg)
     public Player(String playerName){
-
+        // takes in 'playerName' from arg ...
+        // & assign to instance variable/field/state 'playerName'
+        this.playerName = playerName;
+        // initialize instance variable 'level' using "this" reserved word to point to it
+        this.level = 1;
     }
 
     /**
@@ -47,8 +53,11 @@ public class Player {
      * @param playerName the name of the player to be created.
      * @param level the starting level of the player to be created.
      */
+    // overloading earlier Constructor -- same name in Constructor signature but differentiated by dif numbers of args
     public Player(String playerName, int level){
-
+        // transfer args' values to their respective instance states
+        this.playerName = playerName;
+        this.level = level;
     }
 
 }
